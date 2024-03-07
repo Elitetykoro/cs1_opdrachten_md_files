@@ -12,12 +12,13 @@ namespace CalculateOpdracht2
 
             int controllersInMandje = 0;
 
-
+            controllersInMandje += 2;
             //koop 2 controllers
 
 
             //hij is in voorraad snel kopen!
             int ps5 = 0;
+            ps5++;
 
             //koop 1 ps5
 
@@ -29,10 +30,14 @@ namespace CalculateOpdracht2
             int shantae = 0;
 
             int spongebob = 0;
+            eldenRing++;
+            shantae++;
+            spongebob++;
 
 
             //hmmm weten we het zeker?
             //haal 1 game weg met -- of -= 1
+            shantae--;
 
             //nu nog de prijs
 
@@ -41,13 +46,13 @@ namespace CalculateOpdracht2
             double controllerPrijs = 69.99;
             double gamePrijs = 59.99;
 
-
-            double totaalControllerPrijs = 0;// controllersInMandje keer controllerPrijs
-            double totaalGamePrijs = 0;// game1 keer gamePrijs  + game2 keer gamePrijs (let op je haakjes!)
-
+            double totaalControllerPrijs =  controllerPrijs * controllersInMandje;// controllersInMandje keer controllerPrijs
+            double totaalGamePrijs = gamePrijs*2;// game1 keer gamePrijs  + game2 keer gamePrijs (let op je haakjes!)
 
 
-            double totaalPrijs = 0;// tel hier alles bij elkaar op
+
+            double totaalPrijs = totaalGamePrijs + totaalControllerPrijs + ps5Prijs;// tel hier alles bij elkaar op
+            Console.WriteLine(totaalPrijs);
 
             //er moet nu 759.95 staan
         }
